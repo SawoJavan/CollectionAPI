@@ -1,0 +1,52 @@
+.page{
+    height: 3.5rem;
+    width:100vw;
+    background-color: rgba(69, 240, 26, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.page .butto{
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    margin-right: 2rem;
+    background-color: rgb(109, 48, 4);
+    height: 3rem;
+    margin-top: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+.page h3{
+    margin-left: 2.5rem;
+    color: rgb(109, 161, 238);
+    text-transform: uppercase;
+    
+}
+.page h3 span{
+    color: rgb(25, 37, 25);
+    font-style: italic;
+    font-size: 1.5rem;
+    font-family:  serif;
+}
+.icon{
+  
+    margin-left: 0.5rem;
+    padding: 0.5rem 0.7rem;
+}
+.badge{
+    margin-right: 0.4rem;
+    padding: 0.3rem 0.5rem;
+    background-color: rgb(158, 250, 20);
+    border-radius: 2rem;
+    transform: translate(-15px,-7px);
+}
+.title{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem 0.7rem;
+}

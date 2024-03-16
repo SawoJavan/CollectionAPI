@@ -1,0 +1,16 @@
+.homie{
+   margin-left: 5%;
+   margin-right: 5%;
+   height: 95vh;
+   background-image: url('C:\Users\hp\Desktop\my-reduxx\src\Maluku\calesweat.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   text-align: center;
+   
+}
+.pa{
+    color: white;
+    font-size: 2rem;
+
+}

@@ -1,0 +1,48 @@
+.cover{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 10rem;
+    background-color: rgb(231, 250, 243);
+    margin-left: 5%;
+    border-radius: 2rem;
+    margin-bottom: 0.7rem;
+}
+.mage{
+    margin-top: 1.5rem;
+  width:10rem ;
+  height:7rem ;
+}
+.mage img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.9s;
+}
+.mage span{
+   
+   background-color: rgba(0, 0, 0, 0.678);
+   position: relative;
+   border-radius: 0.5rem;
+   bottom: -2rem;
+   left: 20%;
+   color: white;
+   font-size: 1rem;
+   transform: translateX(-50);
+   padding: 0.5rem 1.5rem;
+   transition: all 0.9s;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+.cover:hover .mage span{
+    bottom:1.8rem;
+  }
+  .cover:hover .mage img{
+    transform: scale(1.1);
+}
+.butt{
+   
+}

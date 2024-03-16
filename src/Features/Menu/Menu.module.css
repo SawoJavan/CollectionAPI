@@ -1,0 +1,9 @@
+.mens{
+   display:grid;
+   
+   grid-template-columns: 1fr 1fr; /* Adjust the number of columns as needed */
+  
+   grid-gap: 0.5rem;
+   margin-left: 10%;
+
+}
