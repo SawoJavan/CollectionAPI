@@ -2,15 +2,24 @@ import mnu from './Menu.module.css';
 import { getMenu } from '../ApiLoader';
 import Menus from './Menus';
 import { useLoaderData } from 'react-router-dom';
+import {Box,Stack,Grid} from '@mui/material'
 
 
 const Menu=()=>{
   const {data}=useLoaderData();
   console.log(data);
     return(
-      <div classsName={mnu.mens}>
-        {data.map((dat=><Menus name={dat.name} des={dat.description} price={dat.price} imag={dat.image} size={dat.size} id={dat._id} key={dat._id}/>))  }
-      </div>
+      <Grid container classsName={mnu.mens} columnSpacing={0} rowSpacing={8} sx={{margin:'5%'}} >
+        
+        {data.map((dat=>(<Grid item xs={12} sm={6} md={4} lg={3}> <Menus name={dat.name} 
+        des={dat.description} 
+        price={dat.price} 
+        imag={dat.image} 
+        size={dat.size} 
+        id={dat._id} 
+        key={dat._id}/></Grid>)))  }
+        
+      </Grid>
     )
   }
 

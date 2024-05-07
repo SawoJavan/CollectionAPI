@@ -13,6 +13,7 @@ import OrderCheck from './Features/Customer/OrderCheck.js';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import {Provider} from 'react-redux';
 import { store } from './reducer/Storee.js';
+import {Admin} from './Features/Login/Admin.js';
 
 
 function App() {
@@ -45,13 +46,17 @@ function App() {
         path:'/login',
         element:<Login/>
        },
-       {
-        path:'/sign',
-        element:<Sign/>
-       }
+       
       ],
+ },
+ {
+  path:'/sign',
+  element:<Sign/>
+ },
+ {
+  path:'/admin',
+  element:<Admin/>
  }
-  
      ]);
 
   return (

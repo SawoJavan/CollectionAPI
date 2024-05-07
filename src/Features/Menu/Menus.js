@@ -4,6 +4,7 @@ import anime from '../../Maluku/anime.jpg';
 import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../reducer/reducer';
+import {Stack,Typography,Rating} from '@mui/material';
 const Menus=(props)=>{
     const dispatch=useDispatch();
     const [quantity,setQuantity]=useState(1);
@@ -20,21 +21,21 @@ const Menus=(props)=>{
 
     }
    return(
-    <div className={men.slidd}>
-                <div className={men.slide}>
-                        <div className={men.image}>
+    <Stack className={men.slidd}>
+                <Stack className={men.slide}>
+                        <Stack className={men.image}>
                            <img src={anime} alt=""/>
                            <span>{props.name}</span>
-                        </div>
-                        <div className={men.content}>
-                            <div className={men.icon}>
-                                <a href="">Size {props.size} </a>
-                                <a href=""> Ksh {props.price}</a>
-                            </div>
-                            <a href="" className={men.title}>{props.des}</a>
-                            <p>Vibe with us any time.We reach you quickly </p> 
+                        </Stack>
+                        <Stack className={men.content}>
+                            <Stack className={men.icon} direction='row'>
+                                <Typography variant='subtitle1' >Size {props.size} </Typography >
+                                <Typography variant='subtitle1' > Ksh {props.price}</Typography >
+                            </Stack>
+                            <Typography variant='h5'  className={men.title}>{props.des}</Typography>
+                             <Rating></Rating>
                             <form action="" onSubmit={submitItems}>
-                                <div>
+                                <Stack>
                                 <label htmlFor="quantity">Quantity</label>
                                 <input type="number" min={1} max={3} onChange={(e)=>{
                                     setQuantity(e.target.value);
@@ -42,14 +43,14 @@ const Menus=(props)=>{
                                 }}/>
                                 {!quantValid && <p>Must be btwn 1 and 3</p>}
 
-                                </div>
+                                </Stack>
                                
                                 <Button type='submit'>Buy</Button>
                             </form>
                             
-                        </div>
-                </div>
-    </div>
+                        </Stack>
+                </Stack>
+    </Stack>
    )
 }
 export default Menus;

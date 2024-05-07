@@ -32,7 +32,7 @@ const OrderCheck=()=>{
         Here is where you check your order status.
         <form action="" onSubmit={getOrda}>
             <label htmlFor="search">Enter OrderId</label>
-            <input type="text" onChange={(e)=>{setOda(e.target.value)}}/>
+            <input type="text" onChange={(e)=>{setOda(e.target.value); setOdaValid(true)}}/>
             {!odaValid && <p>Enter the Order</p>}
             <Button type='button'>Search</Button>
         </form>

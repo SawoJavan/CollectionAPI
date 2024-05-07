@@ -83,7 +83,7 @@ const [reference,setReference]=useState('0');
       CustomerDetails: {
         Name,
         Phone: phone,
-        Address: addres
+        Adress: addres
     },
     amountPaid:totalAmount,
     OrderId: OrderID,
@@ -128,7 +128,7 @@ const [reference,setReference]=useState('0');
             <Button type='submit'>Pay Now</Button>
           </form>
           }
-          {totalAmount===0&&<p> {reference}  is your order ID.Please keep for future use.
+          {totalAmount===0&&<p> {reference}  is your order ID.PLEASE note somewhwre for future use.
           <p>Otherwise your order is placed succesfully.</p>
           <Link to='/'><Button>Back &larr;</Button></Link>
           </p>}
