@@ -1,10 +1,11 @@
-import {Grid,Box,Typography} from '@mui/material';
+import {Grid,Box,Typography,AppBar,Toolbar} from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const Footer=()=>{
     return(
-        <Box sx={{backgroundColor:'black',marginTop:'2rem',position:'relative',top:'0'}}>
-           <Grid container sx={{marginTop:'2rem',marginBottom:'2rem'}}>
+        <AppBar position='static' sx={{backgroundColor:'black',bottom:0,top:'auto',marginTop:'2rem' }}>
+         <Toolbar>
+           <Grid container sx={{marginTop:'2rem',marginBottom:'2rem',height:'5rem',paddingBottom:"2rem"}}>
                 <Grid item  xs={12} sm={6} md={4} lg={4} sx={{marginTop:'2rem',marginBottom:'2rem'}}> 
                 <Box>
                     <Typography  variant='h5' sx={{textDecorationLine:'underline',color:'white'}}>
@@ -52,7 +53,8 @@ const Footer=()=>{
                     </Box>
                 </Grid>
            </Grid>
-        </Box>
+           </Toolbar>
+        </AppBar>
     )
 }
 export default Footer;

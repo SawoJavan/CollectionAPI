@@ -3,8 +3,8 @@ const URL="http://localhost:3001/products/v1";
 const url="http://localhost:3001/orders/v1";
 const url1="http://localhost:3001/payment/v5";
 const urllog="http://localhost:3001/users/v3";
-const login='/login';
-const signup='/sign';
+const login='login';
+const signup='sign';
 export  async function  getMenu(){
     try {
         const response=await fetch(URL);
@@ -77,6 +77,7 @@ export async function postOrder(details){
 }
 
 export async function loginUser(credentials){
+
     try{
       const response=  await fetch(`${urllog}/${login}`,{
          method:'POST',
@@ -157,3 +158,26 @@ export async function Delete(id,specifier){
     }
     
 }
+export async function SignUser(details){
+    
+    try{
+      const response=  await fetch(`${urllog}/${signup}`,{
+         method:'POST',
+         body:JSON.stringify(details),
+         headers:{
+             'Content-Type':'application/json'
+         }
+ 
+      })
+      if(!response.ok){
+         const errorResponse = await response.json();
+         throw new Error(errorResponse.message);
+      }
+      const repo=await response.json();
+ 
+      return repo;
+    }catch(err){
+     console.log(err.message);
+     return err.message;
+    }
+ };
