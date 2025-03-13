@@ -1,5 +1,4 @@
-import calesweat from '../..Maluku/calesweat.jpg';
-import home from './Home.module.css';
+
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 
