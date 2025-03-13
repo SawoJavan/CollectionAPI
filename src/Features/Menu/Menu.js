@@ -9,9 +9,9 @@ const Menu=()=>{
   const {data}=useLoaderData();
   console.log(data);
     return(
-      <Grid container classsName={mnu.mens} columnSpacing={0} rowSpacing={8} sx={{margin:'5%'}} >
+      <Grid container classsName={mnu.mens} columnSpacing={2} rowSpacing={8} sx={{margin:'5%'}} >
         
-        {data.map((dat=>(<Grid item xs={12} sm={6} md={4} lg={3}> <Menus name={dat.name} 
+        {data.map((dat=>(<Grid item xs={12} sm={6} md={4} lg={3} > <Menus name={dat.name} 
         des={dat.description} 
         price={dat.price} 
         imag={dat.image} 

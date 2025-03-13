@@ -151,6 +151,10 @@ export async function Delete(id,specifier){
                 'Content-Type':'application/json'
             },
         }) 
+        if(!respo.ok){
+            const errorResponse = await respo.json();
+            throw new Error(errorResponse.message);
+         }
       const repo=await respo.json();
       return repo;
     }catch(err){
@@ -171,7 +175,7 @@ export async function SignUser(details){
       })
       if(!response.ok){
          const errorResponse = await response.json();
-         throw new Error(errorResponse.message);
+         throw new Error(errorResponse);
       }
       const repo=await response.json();
  

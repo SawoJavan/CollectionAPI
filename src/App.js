@@ -14,8 +14,14 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import {Provider} from 'react-redux';
 import { store } from './reducer/Storee.js';
 import {Admin} from './Features/Login/Admin.js';
+import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-
+const defaultTheme = createTheme({
+  //  palette:{
+  //    mode:"dark"
+  // }
+});
 function App() {
  const router=  createBrowserRouter([{
   element:<Applayout/>,
@@ -42,12 +48,13 @@ function App() {
         path:'/order',
         element:<OrderCheck/>
        },
-       {
-        path:'/login',
-        element:<Login/>
-       },
+       
        
       ],
+ },
+ {
+  path:'/login',
+  element:<Login/>
  },
  {
   path:'/sign',
@@ -60,13 +67,15 @@ function App() {
      ]);
 
   return (
+    <ThemeProvider theme={defaultTheme}> 
+    <CssBaseline></CssBaseline> 
     <Fragment>
       <Provider store={store}>
       <RouterProvider router={router}/>
       </Provider>
     
     </Fragment>
-    
+    </ThemeProvider>
   );
 }
 

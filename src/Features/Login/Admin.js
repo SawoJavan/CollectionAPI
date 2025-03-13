@@ -82,9 +82,7 @@ export const Admin=()=>{
         <div>
             <h3>{greeting} {Jina}.What activiteis do you want to perform today?</h3>
             <Button type='button' onClick={addHandler}>Add Product</Button>
-
             <Button type='button' onClick={orderHandler}>View Orders</Button>
-            
             <Button type='button' onClick={proHandler}>View Products</Button>
             {adding && <AddingPro onClose={Onclick}/>}
             {viewin && Object.keys(orders).length!==0 &&  orders.data.map((elem)=>(<Orders customerDetails={elem.CustomerDetails} 
