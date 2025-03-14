@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 //import calesweat from '../..Maluku/calesweat.jpg';
 import home from './Home.module.css';
 //import Button from '../Button/Button';
+=======
+
+import Button from '../Button/Button';
+>>>>>>> 47daed905cdf15e205d38d3ebef8b08a0bc78639
 import { Link } from 'react-router-dom';
 import {Box,Button,Typography,Grid,Paper,Stack,IconButton,Card,CardMedia,CardContent,CardActions} from '@mui/material'
 import {ArrowForward,ArrowDownward,Star,Description} from '@mui/icons-material';
@@ -183,6 +188,11 @@ export function Home(){
 
     </Box>     
   )
+<<<<<<< HEAD
 };
 //export default Home;
 //className={home.homie}
+=======
+}
+//export default Home;
+>>>>>>> 47daed905cdf15e205d38d3ebef8b08a0bc78639

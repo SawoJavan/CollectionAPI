@@ -1,8 +1,11 @@
 
-const URL="http://localhost:3001/products/v1";
-const url="http://localhost:3001/orders/v1";
-const url1="http://localhost:3001/payment/v5";
-const urllog="http://localhost:3001/users/v3";
+const BASE_URL = "https://javo-collection.onrender.com";
+
+
+const URL = `${BASE_URL}/products/v1`;
+const url = `${BASE_URL}/orders/v1`;
+const url1 = `${BASE_URL}/payment/v5`;
+const urllog = `${BASE_URL}/users/v3`;
 const login='login';
 const signup='sign';
 export  async function  getMenu(){
