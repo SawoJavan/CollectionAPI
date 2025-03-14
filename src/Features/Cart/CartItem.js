@@ -1,10 +1,10 @@
-import carts from './CartItems.module.css';
-import luku from '../../Maluku/arsernali.jpg';
+// import carts from './CartItems.module.css';
+// import luku from '../../Maluku/arsernali.jpg';
 //import Button from '../Button/Button';
 import { removeFromCart } from '../../reducer/reducer';
 import { useDispatch } from 'react-redux';
 import {Box,Button,Grid,Typography} from '@mui/material'
-import Icon from '@material-ui/core/Icon';
+//import Icon from '@material-ui/core/Icon';
 import { DeleteOutline } from '@mui/icons-material';
 
 export function CartItems(props){
